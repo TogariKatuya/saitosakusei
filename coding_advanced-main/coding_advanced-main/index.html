@@ -9,17 +9,39 @@
     <title>Casteria</title>
     <header>
         <h1 class="title">Casteria</h1>
-        <nav class="nav">
-            <ul class="menu-group">
-              <li class="menu-item"><a href="#">Home</a></li>
-              <li class="menu-item"><a href="#">Food</a></li>
-              <li class="menu-item"><a href="#">Drink</a></li>
-              <li class="menu-item"><a href="#">お問い合わせ</a></li>
-              <li class="menu-item"> <form id="form" action="自分のサイトのURL">
+            <div class="menu-group">
+              <div class="menu-item"><a href="#">Home</a></div>
+              <div class="menu-item"><a href="#">Food</a></div>
+              <div class="menu-item"><a href="#">Drink</a></div>
+              <div class="menu-item"><a href="#">お問い合わせ</a></div>
+              <div class="menu-item"> <form id="form" action="自分のサイトのURL">
                     <input id="sbox"  id="s" name="s" type="text" placeholder="search" />
-                    <input id="sbtn" type="submit" value="search" /> </form></li>
-            </ul>
-        </nav>
+                    <input id="sbtn" type="submit" value="search" /> </form></div>
+            </div>
+            
+            <!-- ハンバーガーメニュー部分 -->
+            <div class="nav">
+            
+                <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+                <input id="drawer_input" class="drawer_hidden" type="checkbox">
+            
+                <!-- ハンバーガーアイコン -->
+                <label for="drawer_input" data-slide="slide-menu" class="drawer_open"><span></span></label>
+            
+                <!-- メニュー -->
+            <nav class="nav_content">
+                <ul class="nav_list slide-menu">
+                    <li class="nav_item slide-menu"><a href="">Home</a></li>
+                    <li class="nav_item slide-menu"><a href="">Food</a></li>
+                    <li class="nav_item slide-menu"><a href="">Drink</a></li>
+                    <li class="nav_item slide-menu"><a href="">お問い合わせ</a></li>
+                    <li class="nav_item slide-menu"><a href=""><form id="form" action="自分のサイトのURL">
+                        <input id="sbox"  id="s" name="s" type="text" placeholder="search" />
+                        <input id="sbtn" type="submit" value="search" /> </form></a></li>
+                </ul>
+            </nav>
+            </div>
+        
     </header>
         <div class="swiper">
             <!-- スライド要素を包む要素 -->
@@ -37,61 +59,90 @@
     <link href="css/base.css" rel="stylesheet">
 </head>
 <script src="swiper.js"></script>
-<body>
-    
+<body> 
         <h1>新型コロナウイルスに対する取り組みの最新情報をご案内</h1>
-        <h2>衛生面に関して</h2>
-            <h3>マスクを着用しての接客</h3>
-            <h3>出勤前の検温の徹底</h3>
-            <h3>レジカウンターやドリンク受け渡し口等への飛沫防止ガードの設置</h3>
-            <h3>より頻度の高い手洗いの励行</h3>
-            <h3>テーブルにお客様用の消毒用アルコールの設置</h3>
-            <h3>従業員間の距離確保のため、休憩や研修時の客席利用</h3>
-        <h2>お客様へご協力のお願い</h2>
-            <h3>店内では、飲食時以外のマスク着用をお願いします</h3>
-            <h3>入店時の手指の消毒にご協力ください</h3>
-            <h3>レジに並ぶ際、目安を示すフロアステッカーに沿った列間隔の確保にご協力ください</h3>
-            <h3>多数でお越しの際は、お一人様がまとめてご注文お願いします（混雑時に入場制限をする場合がございます）</h3>
-            <h3>発熱や体調不良の際はご入店をお控えください</h3>
-        <h2>サービスに関して</h2>
-            <h3>直接お渡しする商品の提供、金銭授受時にグローブの着用</h3>
-            <h3>ドリンクやフードのサンプリング中止</h3>
-            <h3>地域活動・イベントの中止</h3>
-            <h3>混雑時間帯の客席の譲り合いへのご協力お願いの実施</h3>
-            <h3>店内設置しているミルク、はちみつ、パウダー類の一時引き下げ</h3>
-            <h3>混雑状況に応じたドライブスルーサービスの一時休止や店内客席利用の制限</h3>
+        <h2 class="target" data-slide="slide1">衛生面に関して</h2>
+            <h3 class="pulldown-body slide1">マスクを着用しての接客</h3>
+            <h3 class="pulldown-body slide1">出勤前の検温の徹底</h3>
+            <h3 class="pulldown-body slide1">レジカウンターやドリンク受け渡し口等への飛沫防止ガードの設置</h3>
+            <h3 class="pulldown-body slide1">より頻度の高い手洗いの励行</h3>
+            <h3 class="pulldown-body slide1">テーブルにお客様用の消毒用アルコールの設置</h3>
+            <h3 class="pulldown-body slide1">従業員間の距離確保のため、休憩や研修時の客席利用</h3>
+        <h2 class="target" data-slide="slide2">お客様へご協力のお願い</h2>
+            <h3 class="pulldown-body slide2">店内では、飲食時以外のマスク着用をお願いします</h3>
+            <h3 class="pulldown-body slide2">入店時の手指の消毒にご協力ください</h3>
+            <h3 class="pulldown-body slide2">レジに並ぶ際、目安を示すフロアステッカーに沿った列間隔の確保にご協力ください</h3>
+            <h3 class="pulldown-body slide2">多数でお越しの際は、お一人様がまとめてご注文お願いします（混雑時に入場制限をする場合がございます）</h3>
+            <h3 class="pulldown-body slide2">発熱や体調不良の際はご入店をお控えください</h3>
+        <h2 class="target" data-slide="slide3">サービスに関して</h2>
+            <h3 class="pulldown-body slide3">直接お渡しする商品の提供、金銭授受時にグローブの着用</h3>
+            <h3 class="pulldown-body slide3">ドリンクやフードのサンプリング中止</h3>
+            <h3 class="pulldown-body slide3">地域活動・イベントの中止</h3>
+            <h3 class="pulldown-body slide3">混雑時間帯の客席の譲り合いへのご協力お願いの実施</h3>
+            <h3 class="pulldown-body slide3">店内設置しているミルク、はちみつ、パウダー類の一時引き下げ</h3>
+            <h3 class="pulldown-body slide3">混雑状況に応じたドライブスルーサービスの一時休止や店内客席利用の制限</h3>
         <h4>
             <div class="split">
-                <div class="split-item split-left">
-                    <div class="split-left_inner">
-                        <div class="split-left_inner">Signature Food</div>
-                        <div class="split-left_inner"><img src="img/food.jpg" alt="Swiper01"id="food"></div>
-                        <div class="split-left_inner">Our Coffee</div>
-                        <div class="split-left_inner"><img src="img/barista.jpg" alt="Swiper02"id="food2"></div>
-                        <div class="split-left_inner">Our Food</div>
-                        <div class="split-left_inner"><img src="img/food3.jpg" alt="Swiper06"id="interior"></div>
+                <div class="split-item  js-fade ">
+                    <div class="split-Signature">
+                        <div class="split-img">Signature Food<img src="img/food.jpg" alt="Swiper01"id="food"></div>
+                        <div class="split-msg">サーモンは刺身やカルパッチョで食べるのが美味しいですが、リッチな気分になれるサーモンステーキがおすすめです。サーモンの美味しさを引き立てる２種のソースも絶品です！</div>
+                    </div>
+                    <div class="split-coffee">
+                        <div class="split-img">Our Coffee<img src="img/barista.jpg" alt="Swiper02"id="food2"></div>
+                        <div class="split-msg">当店のコーヒー豆が厳選して世界中から買い付けています。そして、そのコーヒー豆のおいしさを最大限に引き出すために自社のロースターリーで焙煎しています。</div>
+                    </div>
+                    <div class="split-food">
+                        <div class="split-img">Our Food<img src="img/food3.jpg" alt="Swiper06"id="interior"></div>
+                        <div class="split-msg">当店は何よりまずは衛生管理に気をつけています。「安全・安心」をお届けするために日々に継続的な努力を惜しみません。</div>
                     </div>
                 </div>
-                <div class="split-item split-right">
-                    <div class="split-right_inner">
-                        <div class="split-right_inner">
-                            <ul class="split-right_inner">
-                                <li><div class="split-right_inner">サーモンは刺身やカルパッチョで食べるのが美味しいですが、リッチな気分になれるサーモンステーキがおすすめです。サーモンの美味しさを引き立てる２種のソースも絶品です！</div></li>
-                                <li><div class="split-right_inner">当店のコーヒー豆が厳選して世界中から買い付けています。そして、そのコーヒー豆のおいしさを最大限に引き出すために自社のロースターリーで焙煎しています。</div></li>
-                                <li><div class="split-right_inner">当店は何よりまずは衛生管理に気をつけています。「安全・安心」をお届けするために日々に継続的な努力を惜しみません。</div></li>
-                            </ul>
-                        </div>
-                </div>
-                <div class="split-item split-right"></div>
-                <div class="split-item split-left"></div>
             </div>
         </h4>
-        <footer></footer>
-
+   
+        <div class="info js-fade">
+            <div class="Address">
+                    <div class="Address-title"> Address</div>
+                    <div>681 xxxx Driver,xxxx xxxx #01 - 06 000000</div>
+                    <div>Opening Hours</div>
+                    <div class="Address-title">MonDay-Friday:10am-9pm</div>
+                    <div>Saturdays,Sundays & Publik Holidays:9am-9pm</div>
+            </div>
+            <div class="Address-img js-fade ">    
+                    <div class="Address-right"><img src="img/barista.jpg"></div>                
+            </div>
+        </div>
+        <div class="accses">店舗一覧</div>
+        <div class="accsesimg js-fade ">
+            <div class="accsesimg-img">
+                <div class="accsesimg-img"><img src="img/restaurant2.jpg" id="restaurant2"></div>
+                <div class="accsesimg-img"><img src="img/restaurant3.jpg" id="restaurant3"></div>
+                <div class="accsesimg-img"><img src="img/restaurant4.jpg" id="restaurant4"></div>
+                <div class="accsesimg-img"><img src="img/restaurant5.jpg" id="restaurant5"></div>
+            </div>
+            <div class="accses-msg">    
+                <div class="accses-msg">東京都渋谷区xxxxxx xxxxx</div>
+                <div class="accses-msg">千葉県松戸市xxxxx xxxxx</div>
+                <div class="accses-msg">神奈川県横浜市xxxxx xxxx</div>
+                <div class="accses-msg">埼玉県川越市xxxxx xxxx</div>
+            </div>
+        </div>
+    <footer>
+        <ul class="footer-group">
+            <li class="footer-item"><a href="#">プライバシーポリシー</a></li>
+            <li class="footer-item"><a href="#">お問い合わせ</a></li>
+            <li class="footer-item"><a href="#">運営会社</a></li>
+        </ul>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="JavaScript.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="./pulldown.js"></script>
+
 </body>
 </html>
