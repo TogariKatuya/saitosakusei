@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /* reset */
 body, h1, h2, h3, h4, h5, h6, p, address,
 ul, ol, li, dl, dt, dd, img, form, table, tr, th, td {
@@ -87,6 +88,17 @@ header {
 	background:#eee;
 	color:#7fbfff;
 }
+@media screen and (min-width:481px){
+.nav{
+	display: none;
+}
+.slide-menu{
+	display: none;
+}
+.nav_content{
+	display: none;
+}}
+
 
 /*スライド*/
 /*スライダーの幅と高さを調整*/
@@ -367,6 +379,7 @@ h3::before{content:'・';
 		height: 50px;
 		background-color:lightgray;
 		align-items: center;
+		
 	}
 	
 	.title {
@@ -399,17 +412,25 @@ h3::before{content:'・';
 .drawer_hidden {
 	display: none;
   }
+
+.nav_content{
+	display: none;
+}
   
   /* ハンバーガーアイコンの設置スペース */
+.drawer-inner{
+	height: 40px;
+	width: 90%;
+}
+
   .drawer_open {
 	display: flex;
-	height: 60px;
-	width: 330px;
-	justify-content: right;
+	height: 40px;
+	width: 40px;
+	justify-content: center;
 	align-items: center;
 	position: relative;
-	z-index: 100;/* 重なり順を一番上にする */
-	cursor: pointer;
+	margin-left: 300px;
   }
   
   /* ハンバーガーメニューのアイコン */
@@ -422,7 +443,6 @@ h3::before{content:'・';
 	width: 25px;
 	border-radius: 3px;
 	background: #333;
-	transition: 0.5s;
 	position: absolute;
   }
   
@@ -436,32 +456,18 @@ h3::before{content:'・';
 	top: 8px;
   }
   
- 
-	
-  /* メニューのデザイン*/
-  .nav_content {
+
+  
+  .nav-form{
+	height: 40px;
+  }
+
+  .slide-menu{
 	width: 100%;
-	height: 90%;
-	position: fixed;
 	bottom: 100%;
-	left: 0%; /*メニューを画面の外に飛ばす */
-	z-index: 99;
-	background: rgb(110, 110, 110);
-	transition: .5s;
-	text-align: center;
-	padding-top: 20px;
+	background: #ccc;
   }
-  
-  /* メニュー黒ポチを消す
-  .nav_list {
-	list-style: none;
-  }
-  
-/* アイコンがクリックされたらメニューを表示 */
-/* #drawer_input:checked ~ .nav_content {
-	bottom: 0;/* メニューを画面に入れる */
-	
-  /* }  */
+
 
 	/*検索バー*/
 	
@@ -547,6 +553,7 @@ h3::before{content:'・';
 	
 	h1 { text-align: center;
 		font-size: 150%;
+		margin: 20px;
 	 }
 	
 	h2 { 
@@ -648,7 +655,7 @@ h3::before{content:'・';
 	
 	.split-msg{
 		margin-top: 35px;
-		margin-left:40px;
+		margin-left:0px;
 		align-items: center;
 	}
 	
@@ -673,7 +680,7 @@ h3::before{content:'・';
 	.Address-title{
 		font-size: 150%;
 		margin-top: 3%;
-		margin-bottom: 4%;
+		margin-bottom: 1%;
 		margin-left: 2%;
 	}
 	
@@ -681,12 +688,20 @@ h3::before{content:'・';
 		width:200px;
 		height: 300px;
 		/* text-align: center; */
-		margin-left: 30px;
+		margin-left: 0px;
 	}
 	
+	.Address-right{
+		width: 400px;
+		height: 300px;
+		margin: 0;
+	}
+
 	.Address-right img{
-		width: 00px;
-		height: 200px;
+		width: 380px;
+		height: 260px;
+		margin: 0;
+		margin-top: 40px;
 	}
 	
 	

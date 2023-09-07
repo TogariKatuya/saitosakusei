@@ -71,12 +71,10 @@ $(function(){
 // 表示非表示
 // ハンバーガーメニュー
 $(function(){
-    $('.drawer_open').on('click', function(){
-      $('.' + $(this).data('slide-menu')).slideToggle(700);
-      $('.' + $(this).data('fade')).fadeToggle(700);
+    $('.nav').on('click', function(){
+		$('.nav_content').slideToggle();
     })
   })
-$('.' + $(this).data('slide'))==$('slide-menu')
 
 // メイン
 $(function(){

@@ -5,61 +5,66 @@
     <meta name="viewport" content="width=device-width">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="swiper.css"/>
-    
     <title>Casteria</title>
-    <header>
-        <h1 class="title">Casteria</h1>
-            <div class="menu-group">
-              <div class="menu-item"><a href="#">Home</a></div>
-              <div class="menu-item"><a href="#">Food</a></div>
-              <div class="menu-item"><a href="#">Drink</a></div>
-              <div class="menu-item"><a href="#">お問い合わせ</a></div>
-              <div class="menu-item"> <form id="form" action="自分のサイトのURL">
+    <script src="swiper.js"></script>
+</head>
+<header>
+    <h1 class="title">Casteria</h1>
+        <div class="menu-group">
+            <div class="menu-item"><a href="#">Home</a></div>
+            <div class="menu-item"><a href="#">Food</a></div>
+            <div class="menu-item"><a href="#">Drink</a></div>
+            <div class="menu-item"><a href="#">お問い合わせ</a></div>
+            <div class="menu-item"> <form id="form" action="自分のサイトのURL">
                     <input id="sbox"  id="s" name="s" type="text" placeholder="search" />
                     <input id="sbtn" type="submit" value="search" /> </form></div>
-            </div>
-            
-            <!-- ハンバーガーメニュー部分 -->
-            <div class="nav">
-            
-                <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
-                <input id="drawer_input" class="drawer_hidden" type="checkbox">
-            
-                <!-- ハンバーガーアイコン -->
-                <label for="drawer_input" data-slide="slide-menu" class="drawer_open"><span></span></label>
-            
-                <!-- メニュー -->
-            <nav class="nav_content">
-                <ul class="nav_list slide-menu">
-                    <li class="nav_item slide-menu"><a href="">Home</a></li>
-                    <li class="nav_item slide-menu"><a href="">Food</a></li>
-                    <li class="nav_item slide-menu"><a href="">Drink</a></li>
-                    <li class="nav_item slide-menu"><a href="">お問い合わせ</a></li>
-                    <li class="nav_item slide-menu"><a href=""><form id="form" action="自分のサイトのURL">
-                        <input id="sbox"  id="s" name="s" type="text" placeholder="search" />
-                        <input id="sbtn" type="submit" value="search" /> </form></a></li>
-                </ul>
-            </nav>
-            </div>
-        
-    </header>
-        <div class="swiper">
-            <!-- スライド要素を包む要素 -->
-            <div class="swiper-wrapper">
-            <!-- 各スライド -->
-                <div class="swiper-slide"><img src="img/food.jpg" alt="Swiper01"id="food"></div>
-                <div class="swiper-slide"><img src="img/food2.jpg" alt="Swiper02"id="food2"></div>
-                <div class="swiper-slide"><img src="img/interior.jpg" alt="Swiper06"id="interior"></div>
-                <div class="swiper-slide"><img src="img/restaurant.jpg" alt="Swiper07"id="restaurant"></div>
-            </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-	        <div class="swiper-button-next"></div>
         </div>
+        
+        <!-- ハンバーガーメニュー部分 -->
+        <div class="nav">
+        
+            <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+            <input id="drawer_input" class="drawer_hidden" type="checkbox">
+        
+            <!-- ハンバーガーアイコン -->
+            <div class="drawer-inner">
+                <label for="drawer-main" data-slide="slide-menu" class="drawer_open"><span></span></label>
+            </div>
+        </div>
+    
+</header>
+<!-- ハンバーガーメニュー -->
+<nav class="nav_content">
+    <ul class="nav_list slide-menu">
+        <div class="nav_item slide-menu"><a href="">Home</a></div>
+        <div class="nav_item slide-menu"><a href="">Food</a></div>
+        <div class="nav_item slide-menu"><a href="">Drink</a></div>
+        <div class="nav_item slide-menu"><a href="">お問い合わせ</a></div>
+        <form id="form" class="nav-form nav_item slide-menu" action="自分のサイトのURL">
+            <input id="sbox"  id="s" name="s" type="text" placeholder="search" />
+            <input id="sbtn" type="submit" value="search" />
+        </form>
+    </ul>
+</nav>
+
+<!-- スワイパースライド -->
+<div class="swiper">
+    <!-- スライド要素を包む要素 -->
+    <div class="swiper-wrapper">
+    <!-- 各スライド -->
+        <div class="swiper-slide"><img src="img/food.jpg" alt="Swiper01"id="food"></div>
+        <div class="swiper-slide"><img src="img/food2.jpg" alt="Swiper02"id="food2"></div>
+        <div class="swiper-slide"><img src="img/interior.jpg" alt="Swiper06"id="interior"></div>
+        <div class="swiper-slide"><img src="img/restaurant.jpg" alt="Swiper07"id="restaurant"></div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>
     <link href="css/base.css" rel="stylesheet">
-</head>
-<script src="swiper.js"></script>
+
 <body> 
+    <main>
         <h1>新型コロナウイルスに対する取り組みの最新情報をご案内</h1>
         <h2 class="target" data-slide="slide1">衛生面に関して</h2>
             <h3 class="pulldown-body slide1">マスクを着用しての接客</h3>
@@ -99,7 +104,7 @@
                 </div>
             </div>
         </h4>
-   
+
         <div class="info js-fade">
             <div class="Address">
                     <div class="Address-title"> Address</div>
@@ -127,6 +132,7 @@
                 <div class="accses-msg">埼玉県川越市xxxxx xxxx</div>
             </div>
         </div>
+    </main>
     <footer>
         <ul class="footer-group">
             <li class="footer-item"><a href="#">プライバシーポリシー</a></li>
@@ -134,15 +140,13 @@
             <li class="footer-item"><a href="#">運営会社</a></li>
         </ul>
     </footer>
-    
+
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
     <script src="JavaScript.js"></script>
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script src="./pulldown.js"></script>
 
 </body>
 </html>
